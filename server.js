@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({
 //Apis.instance(config.provider, true).init_promise.then((network) => {
 	require('./app/routes/api')(app);
 
-	app.listen(3000, function(){
-		console.log(`Listening at http://localhost:3000`);
+	app.listen(3001, function(){
+		console.log(`Listening at http://localhost:3001`);
 	});
 /*}).catch((err) => {
 	console.log('Network error!');
