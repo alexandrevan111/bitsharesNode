@@ -1,0 +1,19 @@
+{
+  "name": "cryptobridge",
+  "version": "0.0.1",
+  "author": "Alexandre Van Houtte",
+  "private": true,
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "bignumber.js": "^8.0.1",
+    "bitsharesjs": "^1.8.2",
+    "bitsharesjs-ws": "^1.5.5",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "fs-extra": "^7.0.1",
+    "moment": "^2.22.2",
+    "node-json-rpc": "0.0.1",
+    "request": "^2.88.0"
+  }
+}
