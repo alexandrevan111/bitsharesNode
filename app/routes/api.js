@@ -173,11 +173,11 @@ module.exports = function(app) {
 			    },
 	        	seller: app.config.account.id,
 			    amount_to_sell: {
-			    	amount: vox_amount * (10 ** 7),
+			    	amount: parseInt(vox_amount * (10 ** 7)),
 			    	asset_id: app.config.asset.id
 			    },
 			    min_to_receive: {
-			    	amount: btc_amount * (10 ** 8),
+			    	amount: parseInt(btc_amount * (10 ** 8)),
 			    	asset_id: app.config.btc.id
 			    },
 			    fill_or_kill: false,
