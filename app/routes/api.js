@@ -9,8 +9,8 @@ module.exports = function(app) {
 	const wifKey = app.config.permission.active.wif;
 	const pKey = PrivateKey.fromWif(wifKey);
 
-	const min = 5;
-	const max = 15;
+	const min = 30;
+	const max = 300;
 
 	app.get('/getAccount', function(req, res){
 		Apis.instance(app.config.provider, true).init_promise.then((network) => {
@@ -66,7 +66,7 @@ module.exports = function(app) {
 		.catch((err) => {
 			console.log(err);
 			return res.send({status: false});
-		});	
+		});
 	});
 
 	app.get('/getOrderBook', function(req, res){
@@ -189,7 +189,7 @@ module.exports = function(app) {
 	            //console.log("serialized transaction:", tr.serialize());
 
 	            tr.broadcast().then(function(data){
-	            	return res.send({status: true, order_id: data[0].trx.operation_results[0][1]}) 
+	            	return res.send({status: true, order_id: data[0].trx.operation_results[0][1], order_amount: vox_amount}) 
 	            })
 	            .catch((err) => {
 	            	console.log(err);
